@@ -1,8 +1,10 @@
 <?php
+//Mga Headers ni ash/lloyd
 header("Content-Security-Policy: default-src 'self'");
 header("X-Content-Type-Options: nosniff");
 header("X-Frame-Options: DENY");
 header("X-XSS-Protection: 1; mode=block");
+//Class ni sa database shits
 class Database {
     private $servername;
     private $username;
