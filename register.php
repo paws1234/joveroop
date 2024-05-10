@@ -1,3 +1,4 @@
+// Mao niy register page sabotable ra ang functions ash/llloyd//
 <!DOCTYPE html>
 <html>
 <head>
