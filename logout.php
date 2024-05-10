@@ -1,4 +1,4 @@
-//logout shits rani siya diri with csrf token 
+//logout shits rani siya diri with csrf token// 
 <?php
 session_start();
 if (!isset($_POST['csrf_token']) || !hash_equals($_POST['csrf_token'], $_SESSION['csrf_token'])) {
