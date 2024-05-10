@@ -1,26 +1,28 @@
 <?php
+// so kani mao niy mag check unsa na request ang dawaton sa backend endpoint kani na file JS ako gamit pag request naa sa register file or page ash/lloyd
 if ($_SERVER["REQUEST_METHOD"] !== "POST") {
     header("Location: safe.php");
     exit;
 }
-
+//headers rani ash/lloyd for security shits
 header("Content-Security-Policy: default-src 'self'");
 header("X-Content-Type-Options: nosniff");
 header("X-Frame-Options: DENY");
 header("X-XSS-Protection: 1; mode=block");
+//require para nas mga database og authentication shits
 require_once 'Database.php';
 require_once 'Auth.php';
 session_start();
 session_regenerate_id();
 
 $response = array();
-
+//kani mai niy mo check sa json na gi send gikan sa frontend kung naa pajud sud sa session ang csrf token chuy chuy rani
 if (!isset($_SESSION['csrf_token']) || !isset($_POST['csrf_token']) || !hash_equals($_SESSION['csrf_token'], $_POST['csrf_token'])) {
     $response['error'] = "CSRF token validation failed.";
     echo json_encode($response);
     exit;
 }
-
+//sabotable ra ang uban diri ubos
 $username = trim($_POST["username"]); 
 $password = trim($_POST["password"]); 
 
