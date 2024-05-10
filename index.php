@@ -1,6 +1,6 @@
+//sabotable ra guro ninyo ang function names so di ra problema//
 <!DOCTYPE html>
 <html>
-
 <head>
     <title>Login</title>
     <link rel="icon" href="joverlogo.png" type="image/png">
