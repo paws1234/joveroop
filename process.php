@@ -1,3 +1,4 @@
+// Mao niy login backend ash/lloyd sabta lang sabotable ra ang logic//
 <?php
 //Mga Headers ni ash/lloyd
 header("Content-Security-Policy: default-src 'self'");
