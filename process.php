@@ -1,13 +1,12 @@
 <?php
-
+//Mga Headers ni ash/lloyd
 header("Content-Security-Policy: default-src 'self'");
 header("X-Content-Type-Options: nosniff");
 header("X-Frame-Options: DENY");
 header("X-XSS-Protection: 1; mode=block");
-
+//kaning mga require para nis database shit og authentication na redundant ni nako tungod sa ubos tamaa giaty
 require_once 'Database.php';
 require_once 'Auth.php';
-
 session_start();
 session_regenerate_id();
 
